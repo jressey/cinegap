@@ -56,3 +56,4 @@ build-iPhoneSimulator/
 # .rubocop-https?--*
 
 com.plexapp.plugins.library.db
+Preferences.xml
