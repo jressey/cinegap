@@ -1,4 +1,5 @@
 require_relative 'reader_service'
+require_relative 'api_reader_service'
 
 if ARGV.count != 1
     puts "Usage: ruby reader.rb <csv_file>"
@@ -8,7 +9,8 @@ end
 csv = ARGV[0]
 db_path = "/var/lib/plexmediaserver/Library/Application Support/Plex Media Server/Plug-in Support/Databases/com.plexapp.plugins.library.db"
 
-missing = ReaderService.check_missing_from_plex(csv, db_path)
+missing = ReaderService.call(csv, db_path)
+ApiReaderService.call()
 
 missing.each { |title| puts title }
 puts "=========================="
