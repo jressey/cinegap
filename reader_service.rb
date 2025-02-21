@@ -1,5 +1,6 @@
 require 'sqlite3'
 require 'csv'
+require 'mini-levenshtein'
 
 class ReaderService
     TABLE_NAME = "metadata_items"
@@ -22,13 +23,22 @@ class ReaderService
         end
     end
 
-    def self.parse_csv(csv, titles)
+    def self.parse_csv(csv, titles, accuracy = 0.95)
         missing = []
         begin
             CSV.foreach(csv, headers: false) do |row|
-                if !titles.include? row[0].downcase
+                found = false
+                downcased = row[0].downcase
+                titles.each do |title|
+                    if MiniLevenshtein.similarity(downcased, title) > accuracy
+                        found = true
+                        break
+                    end
+                end
+                if !found
                     missing << row[0]
                 end
+                found = false
             end
         rescue Exception => e
             puts "Error parsing CSV: #{e.message}"

@@ -1,6 +1,7 @@
 GEM
   specs:
     csv (3.2.6)
+    mini-levenshtein (0.1.2)
     sqlite3 (2.5.0-x86_64-linux-gnu)
 
 PLATFORMS
@@ -8,6 +9,7 @@ PLATFORMS
 
 DEPENDENCIES
   csv
+  mini-levenshtein
   sqlite3
 
 BUNDLED WITH
