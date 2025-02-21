@@ -1,0 +1,14 @@
+GEM
+  specs:
+    csv (3.2.6)
+    sqlite3 (2.5.0-x86_64-linux-gnu)
+
+PLATFORMS
+  x86_64-linux-gnu
+
+DEPENDENCIES
+  csv
+  sqlite3
+
+BUNDLED WITH
+   2.6.2
