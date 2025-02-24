@@ -24,14 +24,14 @@ You set ENV VARS and run the code locally. Just pass in a pre-formatted csv file
 1. Format CSV
     > The csv must be formatted as follows (single item per line):
     ```
-    Dr. 
+    Dr. Strangelove
     The Wizard of Oz
     Oh Brother, Where art Thou
     ```
 1. Run it
     > You'll need to have Ruby installed on your system and know how to install Gems with Bundler.
 
-    > A test file is included at /test/test.csv (thank you https://www.theyshootpictures.com/gf1000_all1000films.htm)
+    > A test file is included at `/test/test.csv` (thank you https://www.theyshootpictures.com/gf1000_all1000films.htm)
 
     ```
     ruby plex_reader.rb <csv_file.csv>
