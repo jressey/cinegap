@@ -11,7 +11,6 @@ class PlexApiReaderService
     end
 
     def initialize(library_id = 1)
-        @titles = []
         @my_titles = []
 
         @library_id = library_id
