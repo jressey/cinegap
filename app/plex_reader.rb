@@ -1,5 +1,4 @@
 require_relative 'csv_reader_service'
-require_relative 'reader_service'
 require_relative 'plex_api_reader_service'
 require_relative 'check_missing_titles_service'
 
