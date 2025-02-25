@@ -1,5 +1,3 @@
-require 'csv'
-
 class CsvReaderService
     TABLE_NAME = "metadata_items"
 
