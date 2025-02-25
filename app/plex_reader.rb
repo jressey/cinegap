@@ -4,7 +4,7 @@ require_relative 'plex_api_reader_service'
 require_relative 'check_missing_titles_service'
 
 if ARGV.count != 1
-    puts "Usage: ruby reader.rb <csv_file>"
+    puts "Usage: ruby plex_reader.rb <csv_file>"
     exit 1
 end
 
